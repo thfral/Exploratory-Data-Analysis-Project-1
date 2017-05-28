@@ -19,5 +19,7 @@ power_consumption <- subset(power_consumption, power_consumption$Date %in% dates
 
 # Plot Chart
 png("plot2.png", width=480, height=480)
-plot(power_consumption$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)")
+par(mfrow=c(1,1))
+plot(power_consumption$Global_active_power, type="l", xlab="", ylab="Global Active Power (kilowatts)", xaxt = "n")
+axis(side = 1, at = c(1, 1441, 2880), labels = c("Thu", "Fri", "Sat"))
 dev.off()

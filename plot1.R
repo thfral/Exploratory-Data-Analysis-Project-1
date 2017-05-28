@@ -19,5 +19,6 @@ power_consumption <- subset(power_consumption, power_consumption$Date %in% dates
 
 # Plot Chart
 png("plot1.png", width=480, height=480)
+par(mfrow=c(1,1))
 hist(power_consumption$Global_active_power, breaks = 12,  col="red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
 dev.off()
